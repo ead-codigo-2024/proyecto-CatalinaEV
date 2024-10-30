@@ -52,6 +52,14 @@ body{
     color: dimgrey;
 }
 
+nav.seasons{
+    display: flex;
+    flex-direction: column;
+    color: #e20000;
+    padding-bottom: 30px;
+    line-height: 50px;
+}
+
 div.title{
     display: flex;
     justify-content: center;
@@ -98,6 +106,13 @@ p{
     padding-bottom: 1em;
 }
 
+p.bigsubtitle{
+    font-size: 30px;
+    font-weight: 300;
+    color: #e20000;
+    padding-bottom: 1em;
+}
+
 p.subtitle{
     font-weight: 300;
     color: #e20000;
@@ -119,6 +134,14 @@ p.greysubtitle{
 img {
     max-width: 100%;
     height: auto;
+}
+
+div.verticalimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 30px;
 }
 
 figcaption{
@@ -149,6 +172,65 @@ figcaption{
 .default:hover {
     background-color: rgb(234, 234, 234);
   }
+
+/*
+Fade in overlay de cada una de las vistas
+*/
+
+.views {
+    position: relative;
+    display: inline-block; /* Permite que el contenedor ajuste el tamaño de la imagen */
+}
+
+.overlay {
+    display: block;
+    width: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad */
+    color: rgb(0, 0, 0); /* Color del texto */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición suave para el desvanecimiento */
+    display: flex; /* Para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.views:hover .overlay {
+    opacity: 1; /* Muestra la superposición al pasar el mouse */
+}
+
+.textviews {
+    text-align: center; /* Centra el texto */
+}
+
+/*
+TERMINO Fade in overlay
+*/
+
+
+.japsubtitle {
+    font-family: "Yuji Syuku", serif;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: #e20000;
+    font-size: 50px;
+    margin: 30px;
+    margin-bottom: 0;
+
+}
+
+.italicsubtitle {
+    font-style: italic;
+}
+
+
+
+
 
 
 footer{
