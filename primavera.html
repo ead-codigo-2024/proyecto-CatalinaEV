@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio Cien Famosas Vistas de Edo</title>
+    <title>Cien Famosas Vistas de Edo-Primavera</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -18,13 +18,35 @@
 
         <nav class="navbar">
             <a href="index.html">Inicio</a>
-            <a href="autor.html">Autor</a>
-            <a href="cienvistas.html">Obra</a>
-            <div class="search">
-                <form>
-                    <input type="text" placeholder="Buscar...">
-                    <button type="submit">Buscar</button>
-                </form>
+            <div class="dropdown">
+                <a href="autor.html" class="dropdown-toggle">Autor<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="autor.html">Utagawa Hiroshige</a></li>
+                        <li><a href="ukiyoe.html">Ukiyo-e</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="cienvistas.html" class="dropdown-toggle">Cien vistas<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="primavera.html">I. Primavera</a></li>
+                        <li><a href="#">II. Verano</a></li>
+                        <li><a href="#">III. Otoño</a></li>
+                        <li><a href="#">IV. Invierno</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="containersearch">
+                <div class="search_wrap">
+                    <div class="search_box">
+                        <input type="text" class="input" placeholder="buscar...">
+                        <div class="btn btn_common">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -62,5 +84,7 @@
                     aparece el Palacio del Shōgun y, al fondo, el monte Fuji. Cabe destacar el
                     efecto de bokashi en la gradación de los diversos tonos de azul del río.</p>
             </div>
+            
+     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </body>
 </html>

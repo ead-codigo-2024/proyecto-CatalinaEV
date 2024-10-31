@@ -19,7 +19,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 1.15em 4em;
     background: white;
     display: flex;
     justify-content: space-between;
@@ -29,7 +29,7 @@ body{
 }
 
 .logo{
-    font-size: 20px;
+    font-size: 1.25em;
     color: #e20000;
     text-decoration: none;
     font-weight: 300;
@@ -37,42 +37,150 @@ body{
 
 .navbar{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar a {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 300;
     color: black;
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 20px;
+    margin-right: 1.5em;
 }
 
 .navbar a:hover{
     color: dimgrey;
 }
 
+/*Dropdown menu*/
+
+i{
+    padding: 0.5em;
+}
+
+
+.dropdown {
+    position: relative; /* Posiciona el dropdown relativamente */
+}
+
+.dropdown-toggle {
+    text-decoration: none; /* Sin subrayado */
+    padding: 0px; /* Espaciado alrededor del texto */
+}
+
+.dropdown_menu {
+    display: none; /* Ocultar el menú por defecto */
+    position: absolute; /* Posicionar el menú en relación al contenedor */
+    background-color: white; /* Color de fondo */
+    list-style: none; /* Quitar puntos de lista */
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el efecto de profundidad */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.dropdown:hover .dropdown_menu {
+    display: block; /* Mostrar el menú al pasar el ratón */
+}
+
+.dropdown_menu ul {
+    padding: 0; /* Sin padding para el ul */
+    margin: 0; /* Sin margen para el ul */
+}
+
+.dropdown_menu li {
+    padding: 10px 20px; /* Espaciado interno para cada opción */
+    list-style: none;
+}
+
+.dropdown_menu li a {
+    text-decoration: none; /* Sin subrayado */
+    color: black; /* Color del texto */
+}
+
+.dropdown_menu li a:hover {
+    color: dimgrey;
+}
+
+/*Fin dropdown menu*/
+
+
+
+/*Barra de busqueda*/
+
+.containersearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_wrap {
+    width: 100%;
+    max-width: 31.25em; /* Ajusta el tamaño máximo según tus necesidades */
+}
+
+.search_box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; /* Color del borde */
+    border-radius: 25px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.input {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    margin-left: 0.5em;
+    padding: 0.3em 0.625em; /* Espaciado interno */
+    border: none; /* Sin borde interno */
+    outline: none; /* Sin contorno al hacer clic */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.btn {
+    background-color: #b6b6b6; /* Color de fondo del botón */
+    color: white; /* Color del icono */
+    padding: 0.3em 0.625em; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.btn:hover {
+    background-color: #555555; /* Color de fondo al pasar el ratón */
+}
+
+.fas.fa-search {
+    font-size: 1em; /* Tamaño del icono de búsqueda */
+}
+
+/*Fin barra de busqueda*/
+
+
+
 nav.seasons{
     display: flex;
     flex-direction: column;
     color: #e20000;
-    padding-bottom: 30px;
-    line-height: 50px;
+    padding-bottom: 1.875em;
+    line-height: 3.125em;
+    cursor: pointer;
 }
 
 div.title{
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin: 3em;
-    margin-left: 5em;
-    margin-right: 5em;
-    font-size: 72px;
+    margin: 2.8em 5em;
+    font-size: 4.5em;
     font-weight: 300;
     color: #e20000;
-    /*background-color:white;*/
     height: 346px;
-    
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.title.hidden {
+    opacity: 0;
 }
 
 .bigtitle{
@@ -80,26 +188,17 @@ div.title{
     writing-mode: vertical-rl;
     text-orientation: upright;
     text-align: center;
-    line-height: 100px;
-    margin-right: 30px;
+    line-height: 1.5em;
+    margin-right: 0.5em;
 }
 
 .background{
     margin: 10em;
     background-color:white;
-    padding: 13em;
-    padding-top: 5em;
-    padding-bottom: 5em;
-    border-radius: 1rem;
+    padding: 5em 13em;
+    /*border-radius: 1rem;*/
 }
 
-/*
-.container{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-*/
 
 p{
     font-size: large;
@@ -107,10 +206,10 @@ p{
 }
 
 p.bigsubtitle{
-    font-size: 30px;
+    font-size: 1.875em;
     font-weight: 300;
     color: #e20000;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 
 p.subtitle{
@@ -126,51 +225,64 @@ p.greysubtitle{
 
 .text {
     flex: 1;
-    /*padding: 200px;*/
     text-align: justify;
     text-justify: inter-word;
 }
 
 img {
-    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-bottom: 1em;
+    /*
+    max-width: 80%;
     height: auto;
+    */
 }
 
 div.verticalimage{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    margin-bottom: 30px;
+    width: 60%;
+    margin-bottom: 1em;
 }
 
 figcaption{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:'Times New Roman', Times, serif;
     font-style: italic;
-    color: #282828;
-    padding-bottom: 2rem;
+    font-size: 1em;
+    color: #4e4d4d;
+    width: 80%;
+ 
 }
 
 .default_button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 6.25em;
     padding-top: 2em
 }
 
 .default{
     width: 10em;
-    height: 6ex;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    height: 3em;
+    background-color: rgb(133, 133, 133);
     font-weight: 300;
-    color: black;
+    color: rgb(254, 254, 254);
     cursor: pointer;
+    border: 0;
 }
 
+
+
 .default:hover {
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(102, 102, 102);
   }
 
 /*
@@ -218,7 +330,7 @@ TERMINO Fade in overlay
     writing-mode: vertical-rl;
     text-orientation: upright;
     color: #e20000;
-    font-size: 50px;
+    font-size: 3.125em;
     margin: 30px;
     margin-bottom: 0;
 
@@ -227,11 +339,6 @@ TERMINO Fade in overlay
 .italicsubtitle {
     font-style: italic;
 }
-
-
-
-
-
 
 footer{
     background-color: white;
