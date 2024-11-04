@@ -414,3 +414,88 @@ footer{
 .gallery img:hover {
     transform: scale(1.05);
 }
+
+/* Media Queries */
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .header {
+        padding: 1em; /* Reducir el padding en la cabecera */
+    }
+
+    .navbar {
+        flex-direction: column; /* Cambiar a columna para más espacio */
+    }
+
+    .navbar a {
+        margin: 0.5em 0; /* Espaciado vertical */
+    }
+
+    .title {
+        font-size: 2.5em; /* Reducir el tamaño de la fuente del título */
+        margin: 1em 1em; /* Ajustar los márgenes */
+    }
+
+    .background {
+        margin: 15em 1em 5em; /* Reducir margen */
+        padding: 2em; /* Ajustar padding */
+    }
+
+    .default {
+        width: 10em; /* Hacer botones más pequeños */
+        height: 2.5em;
+    }
+
+    img {
+        width: 100%; /* Hacer las imágenes responsivas */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Ajustar a 2 columnas en pantallas pequeñas */
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header {
+        padding: 1.5em; /* Ajustar padding */
+    }
+
+    .title {
+        font-size: 3em; /* Ajustar tamaño de fuente */
+    }
+
+    .background {
+        margin: 9.5em 5em 4em; /* Ajustar margen */
+        padding: 4em; /* Ajustar padding */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* Ajustar a 3 columnas */
+    }
+
+    .default {
+        width: 11em; /* Ajustar tamaño de botones */
+        height: 2.8em;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .header {
+        padding: 1.15em 4em; /* Padding original */
+    }
+
+    .title {
+        font-size: 4.5em; /* Tamaño de fuente original */
+    }
+
+    .background {
+        margin: 10em; /* Margen original */
+        padding: 5em 13em; /* Padding original */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    }
+}
